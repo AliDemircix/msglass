@@ -1,8 +1,8 @@
-"use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { LuShoppingCart } from "react-icons/lu";
+'use client';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { LuShoppingCart } from 'react-icons/lu';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -10,23 +10,28 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      link: "home",
+      label: 'home',
+      link: 'home',
     },
     {
       id: 2,
-      link: "order online",
+      label: 'order online',
+      link: 'order',
     },
     {
       id: 3,
-      link: "find out price now",
+      label: 'find out price now',
+      link: 'findout',
     },
     {
       id: 4,
-      link: "Our Story",
+      label: 'Our Story',
+      link: 'story',
     },
     {
       id: 5,
-      link: "contact",
+      label: 'contact',
+      link: 'contact',
     },
   ];
 
@@ -35,12 +40,12 @@ const Navbar = () => {
       <div className="flex items-center">
         <h1 className="text-5xl font-signature ml-2">MST</h1>
         <ul className="hidden md:flex">
-          {links.map(({ id, link }) => (
+          {links.map(({ id, link, label }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+              className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-orange-500 duration-200 link-underline"
             >
-              <Link href={link}>{link}</Link>
+              <Link href={link}>{label}</Link>
             </li>
           ))}
         </ul>
@@ -65,7 +70,7 @@ const Navbar = () => {
         </ul>
       )}
       <div className="flex items-center gap-1">
-        <LuShoppingCart size={35} />
+        <LuShoppingCart size={25} />
         <p className="text-sm font-bold ">Winkelwagen</p>
       </div>
     </div>
