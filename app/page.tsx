@@ -1,8 +1,9 @@
-import StaticHeader from "@/components/static-header";
-import Navbar from "@/components/navbar";
-import Hero1 from "@/components/hero-1";
-import { CalculatePriceForm } from "../components/calculatePrice";
-import { Products } from "../components/products";
+import StaticHeader from '@/components/static-header';
+import Navbar from '@/components/navbar';
+import Hero1 from '@/components/hero-1';
+import { CalculatePriceForm } from '../components/calculatePrice';
+import { Products } from '../components/products';
+import Locations from '@/components/locations';
 export default function Home() {
   return (
     <main className="px-16 py-8 h-screen w-10/12 mx-auto">
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero1 />
       <CalculatePriceForm />
       <Products />
+      <Locations />
       {/* <Hero1 />
       <Hero1 /> */}
       {/* <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
