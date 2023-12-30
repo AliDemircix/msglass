@@ -4,6 +4,7 @@ import Hero1 from '@/components/hero-1';
 import { CalculatePriceForm } from '../components/calculatePrice';
 import { Products } from '../components/products';
 import Locations from '@/components/locations';
+import CustomerFeedback from '@/components/feedback';
 export default function Home() {
   return (
     <main className="px-16 py-8 h-screen w-10/12 mx-auto">
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero1 />
       <CalculatePriceForm />
       <Products />
+      <CustomerFeedback />
       <Locations />
       {/* <Hero1 />
       <Hero1 /> */}
