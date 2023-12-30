@@ -1,44 +1,55 @@
-'use client';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { LuShoppingCart } from 'react-icons/lu';
+"use client";
+import Link from "next/link";
+import React, { use, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { LuShoppingCart } from "react-icons/lu";
+import { useScrollPosition } from "../hooks/useScrollPosition";
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const scrollPosition = useScrollPosition();
 
   const links = [
     {
       id: 1,
-      label: 'home',
-      link: 'home',
+      label: "home",
+      link: "home",
     },
     {
       id: 2,
-      label: 'order online',
-      link: 'order',
+      label: "order online",
+      link: "order",
     },
     {
       id: 3,
-      label: 'find out price now',
-      link: 'findout',
+      label: "find out price now",
+      link: "findout",
     },
     {
       id: 4,
-      label: 'Our Story',
-      link: 'story',
+      label: "Our Story",
+      link: "story",
     },
     {
       id: 5,
-      label: 'contact',
-      link: 'contact',
+      label: "contact",
+      link: "contact",
     },
   ];
 
   return (
-    <div className="flex justify-between items-center my-4 w-full nav">
+    <div
+      className={classNames(
+        scrollPosition > 0 ? "shadow-transparent" : "shadow-none",
+        "flex justify-between items-center sticky top-0 z-20  bg-white py-2 w-full "
+      )}
+    >
       <div className="flex items-center">
-        <h1 className="text-5xl font-signature ml-2">MST</h1>
+        <h1 className="text-5xl font-signature">MST</h1>
         <ul className="hidden md:flex">
           {links.map(({ id, link, label }) => (
             <li
