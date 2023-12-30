@@ -7,7 +7,7 @@ import Locations from '@/components/locations';
 import CustomerFeedback from '@/components/feedback';
 export default function Home() {
   return (
-    <main className="px-16 py-8 h-screen w-10/12 mx-auto">
+    <main className="px-2 md:px-16 py-8 h-screen w-10/12 mx-auto">
       <StaticHeader />
       <Navbar />
       <Hero1 />

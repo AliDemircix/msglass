@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 export const Products = () => {
   return (
     <section className="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0">
