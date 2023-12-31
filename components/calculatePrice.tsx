@@ -57,7 +57,7 @@ export const CalculatePriceForm = () => {
           <div className="flex flex-col justify-center align-center">
             <div className="flex flex-col gap-2">
               <h1 className="text-2xl font-bold text-center tracking-wider">
-                PRIJS:
+                PRIJS: {!prijs && `€ ...`}
               </h1>
               <h2 className="text-2xl font-bold text-center text-orange-500">
                 {prijs && `€ ${prijs.toFixed(2)}`}
