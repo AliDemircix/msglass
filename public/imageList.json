@@ -1,0 +1,8 @@
+[
+  { "src": "/imageList1.jpg", "alt": "Image 1" },
+  { "src": "/imageList2.jpg", "alt": "Image 2" },
+  { "src": "/imageList3.jpg", "alt": "Image 3" },
+  { "src": "/imageList4.jpg", "alt": "Image 4" },
+  { "src": "/imageList5.jpg", "alt": "Image 5" },
+  { "src": "/imageList6.jpg", "alt": "Image 6" }
+]
