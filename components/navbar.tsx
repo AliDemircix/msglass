@@ -44,8 +44,8 @@ const Navbar = () => {
   return (
     <div
       className={classNames(
-        scrollPosition > 0 ? "shadow-transparent" : "shadow-none",
-        "flex justify-between items-center sticky top-0 z-20  bg-white py-2 w-full "
+        scrollPosition > 0 ? "shadow-transparent fixed" : "shadow-none",
+        "flex justify-between items-center  top-0 z-20  bg-white py-2 w-full "
       )}
     >
       <div className="flex items-center">

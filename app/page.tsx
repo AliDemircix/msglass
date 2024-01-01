@@ -5,7 +5,9 @@ import { CalculatePriceForm } from "../components/calculatePrice";
 import { Products } from "../components/products";
 import Locations from "@/components/locations";
 import CustomerFeedback from "@/components/feedback";
+import Footer from "../components/footer";
 import ImageList from "../components/imageList/ImageList";
+
 export default function Home() {
   return (
     <main className="px-2 md:px-16 py-8 h-screen w-10/12 mx-auto">
@@ -17,6 +19,7 @@ export default function Home() {
       <ImageList />
       <CustomerFeedback />
       <Locations />
+      <Footer />
       {/* <Hero1 />
       <Hero1 /> */}
       {/* <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
