@@ -4,7 +4,7 @@ import locationImg1 from '../public/location1.jpg';
 const Locations = () => {
   const locationsData = [
     {
-      image: locationImg1,
+      image: '/location1.jpg',
       address: '123 Main Street, Cityville',
       Phone: '+1 123-456-7890',
       openingHours: {
@@ -13,7 +13,7 @@ const Locations = () => {
       },
     },
     {
-      image: locationImg1,
+      image: '/location1.jpg',
       address: '456 Oak Avenue, Townsville',
       Phone: '+1 987-654-3210',
       openingHours: {
@@ -28,20 +28,23 @@ const Locations = () => {
       {locationsData.map((location, index) => (
         <div
           key={index}
-          className="bg-gray-100 p-4 rounded-md relative flex flex-wrap"
+          className="bg-gray-100 p-4 rounded-md grid sm:grid-cols-1 md:grid-cols-2 gap-4"
         >
-          <Image
-            src={location.image}
-            alt={`Location ${index + 1}`}
-            className="mb-4 rounded-md "
-            width={300}
-            height={200}
-          />
-          <div className="ml-auto">
-            <p className="font-bold">Address:</p>
-            <p>{location.address}</p>
-            <p className="mt-2 font-bold">Phone:</p>
-            <p>{location.Phone}</p>
+          <div className="relative h-60">
+            <Image
+              src={location.image}
+              alt={`Location ${index + 1}`}
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+          <div>
+            <div className="leading-6">
+              <p className="font-bold">Address:</p>
+              <p>{location.address}</p>
+              <p className="mt-2 font-bold">Phone:</p>
+              <p>{location.Phone}</p>
+            </div>
             <p className="mt-2 font-bold">Opening Hours:</p>
             <ul className="mt-1">
               {Object.entries(location.openingHours).map(([day, hours]) => (

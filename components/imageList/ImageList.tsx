@@ -1,9 +1,9 @@
-"use client";
-import React, { useState } from "react";
-import images from "../../public/imageList.json";
-import ImageItem from "./ImageItem";
-import { Image } from "../../types/imageList";
-import ImageCarousel from "./ImageCarousel";
+'use client';
+import React, { useState } from 'react';
+import images from '../../public/imageList.json';
+import { Image } from '../../types/imageList';
+import ImageCarousel from './ImageCarousel';
+import ImageItem from './ImageItem';
 
 const ImageList: React.FC = () => {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
@@ -15,7 +15,7 @@ const ImageList: React.FC = () => {
   };
 
   const closeCarousel = () => {
-    console.log("helloooo");
+    console.log('helloooo');
     setIsCarouselOpen(false);
   };
 
