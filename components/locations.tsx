@@ -32,7 +32,7 @@ const Locations = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 mb-12">
         {locationsData.map((location, index) => (
           <div key={index} className={' my-6 relative md:my-3 relative'}>
-            <div className={'relative h-60  '}>
+            <div className={'relative h-64  '}>
               <Image
                 src={location.image}
                 alt={`Location ${index + 1}`}
@@ -40,7 +40,7 @@ const Locations = () => {
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <div className="bg-gray-100 p-4 absolute top-10 -right-12 md:top-10 right-6 ">
+            <div className="bg-gray-100 p-4 absolute top-12 -right-12 md:top-12 right-6 ">
               <p className="font-bold text-3xl mb-2 w-52">{location.shop}</p>
               <p className="text-sm">{location.address}</p>
               <p className="mt-2 font-bold underline">Opening Hours:</p>
