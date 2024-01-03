@@ -34,17 +34,17 @@ const CustomerFeedback = () => {
     );
   };
   return (
-    <div className="w-full p-4 border rounded-md shadow-md mb-10 bg-blue-100">
-      <div className="relative p-2">
+    <div className="w-full px-4 py-8 border rounded-md shadow-md mb-10 bg-gray-900 ">
+      <div className="relative p-2 py-8">
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full z-10"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 p-2 rounded-full z-10"
         >
           &lt;
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full z-10"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 p-2 rounded-full z-10"
         >
           &gt;
         </button>
@@ -56,11 +56,9 @@ const CustomerFeedback = () => {
                   key={feedback.id}
                   className="w-full flex flex-col items-center px-10"
                 >
-                  <p className="text-gray-700 flex-1 pr-4">
-                    {feedback.feedback}
-                  </p>
+                  <p className="text-white flex-1 pr-4">{feedback.feedback}</p>
                   <div>
-                    <p className="font-bold">{feedback.name}</p>
+                    <p className="text-white font-bold">{feedback.name}</p>
                   </div>
                 </div>
               ),
